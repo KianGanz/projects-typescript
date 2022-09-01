@@ -532,12 +532,21 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"h7u1C":[function(require,module,exports) {
+/// <reference types="@types/google.maps" />
 var _user = require("./User");
 var _company = require("./Company");
 const user = new (0, _user.User)();
 console.log(user);
 const company = new (0, _company.Company)();
 console.log(company);
+const mapElement = document.getElementById("map");
+if (mapElement) new google.maps.Map(mapElement, {
+    zoom: 1,
+    center: {
+        lat: 0,
+        lng: 0
+    }
+});
 
 },{"./User":"amVbG","./Company":"8qDoX"}],"amVbG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

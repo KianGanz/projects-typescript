@@ -1,0 +1,12 @@
+11
+89/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/dist/index.377278e2.js1662014814642140816 0
+82/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/dist/index.html1662014814626140721 0
+71/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/dist1662014814646140840 1
+88/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/dist/maps.3464ddca.js1662014814646140840 0
+78/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/src/User.ts1662015149211933269 0
+92/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/dist/maps.3464ddca.js.map1662014814646140840 0
+93/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/dist/index.377278e2.js.map1662014814642140816 0
+79/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/src/index.ts1662014745109715116 0
+70/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/src1662015095103666158 1
+77/home/kian/Openscript/TypeScript-projects/projects-typescript/maps/index.html1662014784137956870 0
+66/home/kian/Openscript/TypeScript-projects/projects-typescript/maps1662014814618140674 1

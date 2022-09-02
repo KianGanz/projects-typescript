@@ -534,21 +534,12 @@ function hmrAcceptRun(bundle, id) {
 },{}],"h7u1C":[function(require,module,exports) {
 /// <reference types="@types/google.maps" />
 var _user = require("./User");
-var _company = require("./Company");
+var _customMap = require("./CustomMap");
 const user = new (0, _user.User)();
-console.log(user);
-const company = new (0, _company.Company)();
-console.log(company);
-const mapElement = document.getElementById("map");
-if (mapElement) new google.maps.Map(mapElement, {
-    zoom: 1,
-    center: {
-        lat: 0,
-        lng: 0
-    }
-});
+const customMap = new (0, _customMap.CustomMap)("map");
+customMap.addUserMarker(user);
 
-},{"./User":"amVbG","./Company":"8qDoX"}],"amVbG":[function(require,module,exports) {
+},{"./User":"amVbG","./CustomMap":"4qzxZ"}],"amVbG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "User", ()=>User);
@@ -138971,23 +138962,33 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"8qDoX":[function(require,module,exports) {
+},{}],"4qzxZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Company", ()=>Company);
-var _faker = require("faker");
-var _fakerDefault = parcelHelpers.interopDefault(_faker);
-class Company {
-    constructor(){
-        this.companyName = (0, _fakerDefault.default).company.companyName();
-        this.catchPhrase = (0, _fakerDefault.default).company.catchPhrase();
-        this.location = {
-            lat: parseFloat((0, _fakerDefault.default).address.latitude()),
-            lng: parseFloat((0, _fakerDefault.default).address.longitude())
-        };
+parcelHelpers.export(exports, "CustomMap", ()=>CustomMap);
+class CustomMap {
+    constructor(divId){
+        const mapElement = document.getElementById(divId);
+        if (mapElement) new google.maps.Map(mapElement, {
+            zoom: 1,
+            center: {
+                lat: 0,
+                lng: 0
+            }
+        });
     }
+    addUserMarker(user) {
+        new google.maps.Marker({
+            map: this.googleMap,
+            position: {
+                lat: user.location.lat,
+                lng: user.location.lng
+            }
+        });
+    }
+    addCompanyMarker(company) {}
 }
 
-},{"faker":"hQCNq","@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8"}]},["kqiLf","h7u1C"], "h7u1C", "parcelRequire94c2")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"fD7H8"}]},["kqiLf","h7u1C"], "h7u1C", "parcelRequire94c2")
 
 //# sourceMappingURL=index.b71e74eb.js.map
